@@ -94,5 +94,5 @@ public abstract class Weapon {
      * Enhanced / Weak weapon attributes
      * based on charater's attributes
      */
-    public abstract
+    public abstract int Changwpattributes(ArrayList<Integer> dm,ArrayList<Integer> cs,String sw);
 }

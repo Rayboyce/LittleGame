@@ -12,7 +12,7 @@ public abstract class Charaters {
     private Integer sanity;
     private String name;
     private String selfintroduction;
-    private ArrayList<Integer> attributelabel;
+    private ArrayList<String> attributelabel;
 
     /**
      * Conform to javabean
@@ -20,7 +20,7 @@ public abstract class Charaters {
     public Charaters() {
     }
 
-    public Charaters(Integer hitpiont, Integer magicpiont, Integer sanity, String name, String selfintroduction, ArrayList<Integer> attributelabel) {
+    public Charaters(Integer hitpiont, Integer magicpiont, Integer sanity, String name, String selfintroduction, ArrayList<String> attributelabel) {
         this.hitpiont = hitpiont;
         this.magicpiont = magicpiont;
         this.sanity = sanity;
@@ -69,11 +69,11 @@ public abstract class Charaters {
         this.sanity = sanity;
     }
 
-    public ArrayList<Integer> getAttributelabel() {
+    public ArrayList<String> getAttributelabel() {
         return attributelabel;
     }
 
-    public void setAttributelabel(ArrayList<Integer> attributelabel) {
+    public void setAttributelabel(ArrayList<String> attributelabel) {
         this.attributelabel = attributelabel;
     }
 

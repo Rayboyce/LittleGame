@@ -1,5 +1,7 @@
 package Weapon;
 
+import GameCharacters.Charaters;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,10 +11,10 @@ import java.util.Random;
  * 2.Consume(hp&mp&san)
  * 3.Smallwords
  */
-public abstract class Weapon {
+public class Weapon {
     private ArrayList<Integer> damage;
     private ArrayList<Integer> consume;
-    private String smallwords;
+    private String name;
 
     /**
      * Conform to javabean
@@ -35,7 +37,7 @@ public abstract class Weapon {
         //Consume for san
         consume.add(rd.nextInt(0,1));
 
-        smallwords = "This is a strong WEAPON!!";
+        name = "强力的武器";
     }
 
     public Weapon(ArrayList<Integer> dmorigin,ArrayList<Integer> dmbound
@@ -43,7 +45,7 @@ public abstract class Weapon {
                   ,String selfwords) {
         damage = new ArrayList<>();
         consume = new ArrayList<>();
-        smallwords = selfwords;
+        name = selfwords;
 
         Random rd = new Random();
         //Damage for hp
@@ -60,10 +62,10 @@ public abstract class Weapon {
         consume.add(rd.nextInt(cseorigin.get(Wpcons.alsanindex),csbound.get(Wpcons.alsanindex)));
     }
 
-    public Weapon(ArrayList<Integer> damage, ArrayList<Integer> consume, String smallwords) {
+    public Weapon(ArrayList<Integer> damage, ArrayList<Integer> consume, String name) {
         this.damage = damage;
         this.consume = consume;
-        this.smallwords = smallwords;
+        this.name = name;
     }
 
     public ArrayList<Integer> getDamage() {
@@ -82,17 +84,32 @@ public abstract class Weapon {
         this.consume = consume;
     }
 
-    public String getSmallwords() {
-        return smallwords;
+    public String getName() {
+        return name;
     }
 
-    public void setSmallwords(String smallwords) {
-        this.smallwords = smallwords;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * Enhanced / Weak weapon attributes
      * based on charater's attributes
      */
-    public abstract int Changwpattributes(ArrayList<Integer> dm,ArrayList<Integer> cs,String sw);
+    public void Changwpattributes(Charaters role){
+        role.getAttributelabel().forEach(label->{
+            switch(label){
+                case "中二":
+                    //HP damage add 2
+                    System.out.println(this.name + " the hp damage is " + this.damage.get(Wpcons.alhpindex)
+                    + " before the reaction with the role " + role.getName());
+                    this.damage.set(Wpcons.alhpindex,this.damage.get(Wpcons.alhpindex)+2);
+                    break;
+                default:
+                    break;
+            }
+        });
+        System.out.println(this.name + " the hp damage is " + this.damage.get(Wpcons.alhpindex)
+                + " after the reaction with the role " + role.getName());
+    }
 }

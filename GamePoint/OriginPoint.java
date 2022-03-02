@@ -1,21 +1,17 @@
 package GamePoint;
 
-import javax.swing.*;
+import javax.swing.JButton;
 
-public abstract class OriginPoint {
-    JButton jButton;
+public abstract class OriginPoint  {
+    JButton nButton;
     int x;
     int y;
 
-    public OriginPoint(){
-        jButton = new JButton();
-    }
+    public OriginPoint(){ }
 
     public OriginPoint(int a,int b){
         this();
         this.x = a;
         this.y = b;
     }
-
-
 }

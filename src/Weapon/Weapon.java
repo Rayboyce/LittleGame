@@ -1,6 +1,6 @@
-package Weapon;
+package src.Weapon;
 
-import GameCharacters.Charaters;
+import src.GameCharacters.Charaters;
 
 import java.util.ArrayList;
 import java.util.Random;

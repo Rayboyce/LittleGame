@@ -1,4 +1,4 @@
-package Weapon;
+package src.Weapon;
 
 /**
  * CAUTION!

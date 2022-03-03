@@ -1,6 +1,6 @@
-package GameTest;
+package src.GameTest.GameTest;
 
-import GameMap.BattleMap;
+import src.GameMap.BattleMap;
 
 import javax.swing.*;
 import java.awt.*;

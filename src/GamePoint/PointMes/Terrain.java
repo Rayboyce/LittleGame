@@ -1,4 +1,4 @@
-package GamePoint.PointMes;
+package src.GamePoint.PointMes;
 
 public enum Terrain {
     Grasslands("草原"),

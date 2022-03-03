@@ -1,6 +1,6 @@
-package GamePoint;
+package src.GamePoint;
 
-import GamePoint.PointMes.Terrain;
+import src.GamePoint.PointMes.Terrain;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

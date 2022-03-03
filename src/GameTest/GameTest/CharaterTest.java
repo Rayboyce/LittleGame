@@ -1,10 +1,9 @@
-package GameTest;
+package src.GameTest.GameTest;
 
-import GameCharacters.Charaters;
-import Weapon.Weapon;
+import src.GameCharacters.Charaters;
+import src.Weapon.Weapon;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class CharaterTest {
     public static void main(String[] args) {

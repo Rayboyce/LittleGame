@@ -1,4 +1,4 @@
-package Weapon;
+package src.Weapon;
 
 /**
  * Constants defined in package Weapon

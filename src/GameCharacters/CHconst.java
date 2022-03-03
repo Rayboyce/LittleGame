@@ -1,4 +1,4 @@
-package GameCharacters;
+package src.GameCharacters;
 
 /**
  * Constants defined in package GameCharaters

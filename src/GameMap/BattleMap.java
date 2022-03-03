@@ -1,6 +1,6 @@
-package GameMap;
+package src.GameMap;
 
-import GamePoint.BattlePoint;
+import src.GamePoint.BattlePoint;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package GamePoint;
+package src.GamePoint;
 
 import javax.swing.JButton;
 

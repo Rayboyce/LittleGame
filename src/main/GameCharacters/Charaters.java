@@ -1,6 +1,7 @@
 package src.main.GameCharacters;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * This is the basic Attribute for every Characters
@@ -13,6 +14,7 @@ public abstract class Charaters {
     private String name;
     private String selfintroduction;
     private ArrayList<String> attributelabel;
+    private Integer charaterId;
 
     /**
      * Conform to javabean
@@ -27,6 +29,7 @@ public abstract class Charaters {
         this.name = name;
         this.selfintroduction = selfintroduction;
         this.attributelabel = attributelabel;
+        this.charaterId = new Random().nextInt(100000000);  //该方法仍有可能出现重复Id，后续再修改
     }
 
     public Integer getHitpiont() {
@@ -76,6 +79,8 @@ public abstract class Charaters {
     public void setAttributelabel(ArrayList<String> attributelabel) {
         this.attributelabel = attributelabel;
     }
+
+    public Integer getCharaterId(){ return this.charaterId; }
 
     //Need to generate a meaningless action for cute
     public abstract void actingcute();

@@ -7,11 +7,12 @@ public abstract class OriginPoint  {
     int x;
     int y;
 
+
     public OriginPoint(){ }
 
-    public OriginPoint(int a,int b){
+    public OriginPoint(int x,int y){
         this();
-        this.x = a;
-        this.y = b;
+        this.x = x;
+        this.y = y;
     }
 }

@@ -1,6 +1,5 @@
 package src.main.GameTest;
 
-import src.main.GameMap.BattleMap;
 import src.main.Manager.BattleManager;
 
 import javax.swing.*;
